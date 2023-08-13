@@ -1,0 +1,2135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+/* Global Tags */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgb(35, 35, 85);
+}
+span {
+  font-size: 0.9rem;
+  color: #757373;
+}
+h6 {
+  font-size: 1.1rem;
+  color: rgb(24, 24, 49);
+}
+/* Navigation */
+nav {
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vw 8vw;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+}
+nav img {
+  width: 200px;
+  cursor: pointer;
+}
+nav .navigation {
+  display: flex;
+  align-items: center;
+}
+#menu-btn {
+  width: 30px;
+  height: 30px;
+  display: none;
+}
+#menu-close {
+  display: none;
+}
+nav .navigation ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav .navigation ul li {
+  list-style-type: none;
+  margin-left: 30px;
+}
+nav .navigation ul li a {
+  text-decoration: none;
+  color: rgb(21, 21, 100);
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "BPG Nino Medium Caps", sans-serif;
+  transition: 0.3s ease;
+}
+nav .navigation ul li a.active,
+nav .navigation ul li a:hover {
+  color: #fdc93b;
+}
+.header-btn {
+  display: flex;
+  gap: 15px;
+  margin: 0 20px;
+}
+.header-btn a {
+  background-color: #161677;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 8px 15px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "BPG Nino Medium Caps", sans-serif;
+  border-radius: 5px;
+  letter-spacing: 1.6px;
+  transition: 0.3s ease;
+}
+.header-btn a:hover {
+  background-color: #fdc93b;
+}
+/* Home */
+#home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+  /*padding-top: 40px;*/
+}
+#home::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #0000007b;
+  z-index: 1;
+}
+#home img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#home h2 {
+  color: #fff;
+  font-family: "BPG Nino Mtavruli Bold", sans-serif;
+  font-size: 2.6rem;
+  letter-spacing: 1.8px;
+  margin-bottom: 20px;
+  z-index: 2;
+}
+#home p {
+  width: 50%;
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 26px;
+  letter-spacing: 1.1px;
+  font-family: "BPG Nino Mtavruli Book", sans-serif;
+  z-index: 2;
+}
+#home .btn {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+  z-index: 2;
+}
+#home a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-family: "BPG Nino Medium Caps", sans-serif;
+  padding: 15px 35px;
+  font-weight: 600;
+  background-color: #fff;
+  border-radius: 5px;
+  z-index: 2;
+}
+#home a.blue {
+  color: #fff;
+  letter-spacing: 1.6px;
+  background: rgb(21, 21, 100);
+  transition: 0.4s ease;
+  margin-right: 30px;
+  font-size: 18px;
+  z-index: 2;
+}
+#home a.blue:hover {
+  color: rgb(21, 21, 100);
+  background: #fff;
+}
+#home a.yellow {
+  color: #fff;
+  letter-spacing: 1.6px;
+  background: #fdc93b;
+  transition: 0.4s ease;
+  font-size: 18px;
+  z-index: 2;
+}
+#home a.yellow:hover {
+  color: rgb(21, 21, 100);
+  background: #fff;
+}
+/* Features */
+#features {
+  padding: 5vw 8vw 0 8vw;
+  text-align: center;
+}
+#features .fea-base {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin-top: 50px;
+}
+#features h1 {
+  font-size: 2.6rem;
+  letter-spacing: 1.8px;
+  font-family: "BPG Nino Mtavruli Bold", sans-serif;
+}
+#features p {
+  font-weight: 400;
+  margin-top: 20px;
+  font-size: 1.4rem;
+  line-height: 30px;
+  letter-spacing: 1.3px;
+  font-family: "BPG Nino Medium Caps", sans-serif;
+  color: rgb(70, 70, 87);
+}
+#features .fea-box {
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  background: #f9f9ff;
+  text-align: center;
+  padding: 15px;
+}
+
+#features .fea-box i {
+  font-size: 2.3rem;
+  color: rgb(44, 44, 80);
+}
+#features .fea-box h3 {
+  font-size: 1.4rem;
+  letter-spacing: 1.6px;
+  font-weight: 600;
+  font-family: "BPG Nino Mtavruli Bold", sans-serif;
+  color: rgb(46, 46, 59);
+  padding: 13px 0 7px 0;
+}
+#features .fea-box p {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "BPG Nino Medium Caps", sans-serif;
+  color: rgb(70, 70, 87);
+}
+/* Course */
+#course {
+  padding: 8vw 8vw 8vw 8vw;
+  text-align: center;
+}
+#course h1 {
+  font-size: 2.6rem;
+  letter-spacing: 1.8px;
+  font-family: "BPG Nino Mtavruli Bold", sans-serif;
+}
+#course p {
+  font-weight: 400;
+  margin-top: 20px;
+  font-size: 1.4rem;
+  line-height: 30px;
+  letter-spacing: 1.3px;
+  font-family: "BPG Nino Medium Caps", sans-serif;
+  color: rgb(70, 70, 87);
+}
+#course .course-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  margin-top: 50px;
+}
+#course .courses {
+  text-align: start;
+  background: #f9f9ff;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  transition: all 0.4s;
+}
+#course .courses:hover {
+  cursor: pointer;
+  transform: scale(1.07);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+#course .courses:hover img {
+  filter: grayscale(0);
+}
+#course .courses img {
+  width: 100%;
+  height: 60%;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%);
+  transition: all 0.4s;
+}
+#course .courses .details {
+  padding: 15px 15px 0 15px;
+}
+#course .courses .details i {
+  color: #fdc93b;
+  font-size: 1.2rem;
+}
+#course .courses .cost {
+  background-color: rgb(74, 74, 136);
+  color: #fff;
+  line-height: 70px;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  right: 3%;
+  bottom: 30%;
+  font-size: 1.2rem;
+}
+#course span {
+  font-size: 1.2rem;
+}
+#course h6 {
+  font-size: 1.4rem;
+  margin: 10px 0;
+}
+/* Registration */
+#registration {
+  padding: 6vw 8vw 6vw 8vw;
+  background-image: linear-gradient(
+      rgba(99, 112, 168, 0.5),
+      rgba(81, 91, 233, 0.5)
+    ),
+    url("/images/signup.jpg");
+  background-image: -webkit-linear-gradient(
+      rgba(99, 112, 168, 0.5),
+      rgba(81, 91, 233, 0.5)
+    ),
+    url("/images/signup.jpg");
+  background-image: -moz-linear-gradient(
+      rgba(99, 112, 168, 0.5),
+      rgba(81, 91, 233, 0.5)
+    ),
+    url("/images/signup.jpg");
+  background-image: -o-linear-gradient(
+      rgba(99, 112, 168, 0.5),
+      rgba(81, 91, 233, 0.5)
+    ),
+    url("/images/signup.jpg");
+  background-image: -ms-linear-gradient(
+      rgba(99, 112, 168, 0.5),
+      rgba(81, 91, 233, 0.5)
+    ),
+    url("/images/front_images/signup.jpg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#registration .reminder {
+  width: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+#registration .reminder h1 {
+  color: #fff;
+  font-size: 2.6rem;
+  letter-spacing: 1.8px;
+  margin-bottom: 50px;
+  font-family: "BPG Nino Mtavruli Bold", sans-serif;
+}
+#registration .reminder .time {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#registration .reminder .time:not(:last-child) {
+  margin-bottom: 50px;
+}
+.time__title {
+  width: 600px;
+  margin-right: 10px;
+  font-size: 36px;
+  letter-spacing: 4px;
+}
+.countdown__times {
+  display: flex;
+}
+.countdown__time {
+  width: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  font-size: 26px;
+  font-weight: 900;
+  color: #161616;
+  letter-spacing: 6px;
+  border-radius: 10px;
+  background-color: rgb(255 255 255 / 80%);
+  box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px,
+    rgb(0 0 0 / 30%) 0px 30px 60px -30px,
+    rgb(10 37 64 / 35%) 0px -2px 6px 0px inset;
+}
+.countdown__time:not(:last-child) {
+  margin-right: 50px;
+}
+.countdown__time-text {
+  font-size: 20px;
+  margin-top: 10px;
+}
+#registration .form {
+  background: #fff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  padding: 40px;
+}
+#registration .form h3 {
+  font-family: "BPG Nino Medium Caps", sans-serif;
+  color: rgb(74, 74, 136);
+}
+#registration .form form {
+  display: flex;
+  flex-direction: column;
+}
+#registration .form form input {
+  margin: 15px 0;
+  padding: 15px 10px;
+  border: 1px solid rgb(84, 40, 241);
+  outline: none;
+  text-align: start;
+}
+#registration .form form input::placeholder {
+  color: #413c3c;
+  font-weight: 500;
+  font-size: 0.9rem;
+  font-family: "BPG Nino Mtavruli Book", sans-serif;
+}
+#registration .form .btn {
+  margin-top: 20px;
+}
+#registration button.yellow {
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-family: "BPG Nino Medium Caps", sans-serif;
+  padding: 13px 35px;
+  outline: none;
+  font-weight: 600;
+  border-radius: 5px;
+  letter-spacing: 2px;
+  color: #fff;
+  background: #fdc93b;
+  border: 1px solid #fdc93b;
+  transition: 0.3s ease;
+}
+#registration button.yellow:hover {
+  color: rgb(21, 21, 100);
+  background: #fff;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+/* Experts */
+#experts {
+  padding: 8vw 8vw 8vw 8vw;
+  text-align: center;
+}
+#experts h1 {
+  font-size: 2.6rem;
+  letter-spacing: 1.8px;
+  font-family: "BPG Nino Mtavruli Bold", sans-serif;
+}
+#experts p {
+  font-weight: 400;
+  margin-top: 20px;
+  font-size: 1.4rem;
+  line-height: 30px;
+  letter-spacing: 1.3px;
+  font-family: "BPG Nino Medium Caps", sans-serif;
+  color: rgb(70, 70, 87);
+}
+#experts .expert-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 3rem;
+  margin-top: 50px;
+}
+#experts .expert-box .profile {
+  background: #f9f9ff;
+  padding: 30px 10px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+#experts .expert-box .profile h6 {
+  font-size: 1.4rem;
+  letter-spacing: 1.3px;
+}
+.pro-links {
+  margin-top: 10px;
+}
+.pro-links i {
+  padding: 10px 13px;
+  border: 1px solid rgba(21, 21, 100);
+  cursor: pointer;
+  color: rgb(21, 21, 100);
+  transition: 0.3s ease;
+}
+.pro-links i:not(:last-child) {
+  margin-right: 10px;
+}
+.pro-links i:hover {
+  background: rgb(21, 21, 100);
+  color: #fff;
+}
+/* Footer */
+footer {
+  padding: 50px;
+  background-color: #101c32;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+footer .footer-col {
+  padding-bottom: 40px;
+}
+footer h3 {
+  color: rgb(241, 240, 245);
+  font-weight: 600;
+  font-family: "BPG Nino Medium Caps", sans-serif;
+  padding-bottom: 20px;
+  font-size: 1.6rem;
+  letter-spacing: 1.6px;
+}
+footer li {
+  list-style-type: none;
+  color: #fff;
+  padding: 10px 0;
+  font-size: 15px;
+  letter-spacing: 1.4px;
+  cursor: pointer;
+  font-family: "BPG Nino Mtavruli Book", sans-serif;
+  transition: 0.3s ease;
+}
+footer li:hover {
+  color: #fdc93b;
+}
+footer p {
+  color: #fff;
+  font-family: "BPG Nino Mtavruli Book", sans-serif;
+}
+footer .subscribe {
+  margin-top: 20px;
+}
+footer input {
+  width: 220px;
+  padding: 15px 12px;
+  background: #334f6c;
+  border: none;
+  outline: none;
+  color: #fff;
+}
+footer .subscribe a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 13px 15px;
+  background-color: #fff;
+  font-weight: 600;
+}
+footer .subscribe a.yellow {
+  color: #2c2c2c;
+  background: #fdc93b;
+  transition: 0.3s ease;
+}
+footer .subscribe a.yellow:hover {
+  color: rgb(21, 21, 100);
+  background: #fff;
+}
+footer .copyright {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  letter-spacing: 1.6px;
+  font-size: 1.2rem;
+}
+footer .copyright p {
+  color: #fff;
+  font-size: 16px;
+}
+footer .footer-form p {
+  letter-spacing: 1.4px;
+  color: #fff;
+}
+footer .copyright .pro-links {
+  margin-top: 0;
+}
+footer .copyright .pro-links i {
+  background-color: #5f7185;
+  color: #fff;
+}
+footer .copyright .pro-links i:hover {
+  background: #fdc93b;
+  color: #2c2c2c;
+}
+
+/* About */
+
+#about-home {
+  background-image: linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.7)),
+    url("../images/back1.jpg");
+  background-image: -webkit-linear-gradient(
+      rgba(9, 5, 54, 0.3),
+      rgba(5, 4, 46, 0.7)
+    ),
+    url("../images/back1.jpg");
+  background-image: -moz-linear-gradient(
+      rgba(9, 5, 54, 0.3),
+      rgba(5, 4, 46, 0.7)
+    ),
+    url("../images/back1.jpg");
+  background-image: -o-linear-gradient(rgba(9, 5, 54, 0.3), rgba(5, 4, 46, 0.7)),
+    url("../images/back1.jpg");
+  background-image: -ms-linear-gradient(
+      rgba(9, 5, 54, 0.3),
+      rgba(5, 4, 46, 0.7)
+    ),
+    url("../images/back1.jpg");
+  width: 100%;
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /*padding-top: 40px;*/
+}
+#about-home h2 {
+  color: #fff;
+  font-size: 2.2rem;
+  font-family: "BPG Nino Mtavruli Bold", sans-serif;
+  letter-spacing: 1px;
+}
+#about-container {
+  display: flex;
+  align-items: center;
+  padding: 3vw 8vw 0 8vw;
+}
+#about-container .about-img {
+  width: 60%;
+  padding-right: 60px;
+}
+#about-container .about-img img {
+  width: 100%;
+}
+#about-container .about-text {
+  width: 40%;
+}
+#about-container .about-text h2 {
+  font-size: 1.7rem;
+  letter-spacing: 1.4px;
+  color: #29303b;
+  padding-bottom: 15px;
+  font-family: "BPG Nino Medium Caps", sans-serif;
+}
+#about-container .about-text p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #686f7a;
+  font-weight: 300;
+  font-family: "BPG Nino Mtavruli Book", sans-serif;
+  font-size: 1.2rem;
+}
+#about-container .about-text .about-fe {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+#about-container .about-text .about-fe img {
+  width: 50px;
+  background-size: cover;
+  background-position: center;
+  margin-right: 20px;
+}
+#about-container .about-text .about-fe .fe-text {
+  width: 90%;
+}
+#about-container .about-text .about-fe .fe-text h5 {
+  font-size: 16px;
+  color: #29303b;
+  font-family: "BPG Nino Medium Caps", sans-serif;
+  margin-bottom: 10px;
+}
+#about-us {
+  text-align: center;
+  padding: 8vw 8vw 3vw 8vw;
+}
+#about-us h2 {
+  font-size: 2.6rem;
+  letter-spacing: 1.8px;
+  font-family: "BPG Nino Mtavruli Bold", sans-serif;
+}
+#about-us p {
+  font-weight: 400;
+  margin-top: 20px;
+  font-size: 1.4rem;
+  line-height: 30px;
+  letter-spacing: 1.3px;
+  font-family: "BPG Nino Medium Caps", sans-serif;
+  color: rgb(70, 70, 87);
+}
+#about-us .slider__section {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 0px 20px;
+  margin: 0 auto;
+  margin-top: 50px;
+  background-color: #fff;
+}
+#about-us .slider__container {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+#about-us .slider__wrapper {
+  display: flex;
+  transition: 0.5s;
+}
+#about-us .slider__item {
+  position: relative;
+  height: 300px;
+  border-left: 5px solid #fff;
+  border-right: 5px solid #fff;
+  z-index: 2;
+  cursor: pointer;
+}
+#about-us .slider__item:hover .slider__item-hover {
+  opacity: 0;
+}
+#about-us .slider__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#about-us .slider__item-hover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  opacity: 0;
+  transition: 0.3s;
+}
+#about-us .slider__item-hover img {
+  width: 70px;
+  height: 70px;
+}
+#about-us .slider__item:hover .slider__item-hover {
+  opacity: 0.4;
+}
+#about-us .slider__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 5px 5px;
+  border: 2px solid #bc9a61;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+  z-index: 3;
+}
+#about-us .slider__button:hover {
+  background-color: #fff;
+}
+#about-us .slider__button-prev {
+  left: 30px;
+}
+#about-us .slider__button-next {
+  right: 30px;
+}
+#about-us .slider__button svg {
+  color: #bc9a61;
+}
+#about-us .slider__items-modal {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 10%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  z-index: 0;
+  overflow: auto;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 100;
+}
+#about-us .slider__items-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 40px;
+  cursor: pointer;
+  color: #fff;
+}
+#about-us .slider__items-modal-Content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#about-us .slider__items-modal-img {
+  width: 80%;
+  max-width: 700px;
+}
+#about-us .slider__items-modal.active {
+  z-index: 10;
+  opacity: 1;
+  pointer-events: all;
+}
+#about-us .slider__items-modal.active .slider__items-modal-img {
+  animation: zoom 0.3s linear;
+}
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+#trust {
+  text-align: center;
+  padding: 8vw;
+}
+#trust h1 {
+  font-size: 2.6rem;
+  letter-spacing: 1.8px;
+  font-family: "BPG Nino Mtavruli Bold", sans-serif;
+}
+#trust p {
+  font-weight: 400;
+  margin-top: 20px;
+  font-size: 1.4rem;
+  line-height: 30px;
+  letter-spacing: 1.3px;
+  font-family: "BPG Nino Medium Caps", sans-serif;
+  color: rgb(70, 70, 87);
+}
+#trust .trust-img {
+  width: 100%;
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+}
+#trust .trust-img .trust-img__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#trust .trust-img img {
+  width: 120px;
+  height: auto;
+  object-fit: cover;
+}
+#trust .trust-img p {
+  width: 100%;
+  font-size: 16px;
+  padding: 10px;
+}
+/* Blog */
+#blog-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8vw;
+}
+#blog-container .blogs {
+  width: 50%;
+}
+#blog-container .blogs video {
+  width: 100%;
+  border-radius: 19px;
+}
+#blog-container .blogs .post {
+  padding-bottom: 60px;
+}
+#blog-container .blogs .post h3 {
+  font-size: 1.6rem;
+  letter-spacing: 1.6px;
+  color: #29303b;
+  font-family: "BPG Nino Medium Caps", sans-serif;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+#blog-container .blogs .post p {
+  color: #757373;
+  font-family: "BPG Nino Mtavruli Book", sans-serif;
+  font-size: 1.4rem;
+  padding-bottom: 20px;
+  line-height: 1.9rem;
+  letter-spacing: 1.3px;
+  margin-bottom: 30px;
+}
+#blog-container .blogs .post .post-border {
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  font-size: 12px;
+  letter-spacing: 0.6vw;
+  color: #151564;
+}
+#blog-container .blogs .post .post-border::after {
+  content: "";
+  position: absolute;
+  left: 4%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20%;
+  height: 1px;
+  background-color: #151564;
+  border-radius: 50px;
+}
+#blog-container .blogs .post .post-border::before {
+  content: "";
+  position: absolute;
+  right: 4%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20%;
+  height: 1px;
+  background-color: #151564;
+  border-radius: 50px;
+}
+/* Course Inner */
+#course-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 8vw;
+}
+#course-inner h3 {
+  padding: 35px 0 25px 0;
+  color: #29303b;
+  font-family: "BPG Nino Mtavruli Bold", sans-serif;
+}
+#course-inner p {
+  color: #64626e;
+  font-size: 20px;
+  font-family: "BPG Nino Mtavruli Book", sans-serif;
+  font-weight: 600;
+}
+#course-inner hr {
+  height: 1px;
+  background: rgba(236, 226, 229, 0.5);
+  margin-top: 40px;
+}
+#course-inner .overview {
+  width: 70%;
+}
+#course-inner .overview .course-img {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+#course-inner .overview .course-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+#course-inner .overview .course-head .c-name {
+  width: 70%;
+}
+#course-inner .overview .course-head .c-name h2 {
+  color: #29303b;
+  font-family: "BPG Nino Medium Caps", sans-serif;
+}
+#course-inner .overview .course-head .c-name .star {
+  margin: 6px 0;
+}
+#course-inner .overview .course-head .c-name .star i {
+  color: #fdc93b;
+  font-size: 0.9rem;
+}
+#course-inner .overview .course-head .c-name p {
+  font-family: "BPG Nino Mtavruli Book", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #29303b;
+  line-height: 1.7rem;
+}
+#course-inner .overview .course-head span {
+  padding: 16px 13px;
+  border-radius: 5px;
+  color: #5838fc;
+  font-size: 24px;
+  font-weight: 700;
+  background-color: rgba(88, 56, 252, 0.1);
+}
+#course-inner .learn p {
+  font-size: 18px;
+  padding-bottom: 15px;
+  color: #29303b;
+  font-weight: 600;
+  font-family: "BPG Nino Mtavruli Book", sans-serif;
+}
+#course-inner .learn p i {
+  color: #654ce4;
+  font-weight: 700;
+  margin-right: 15px;
+}
+#course-inner .tutor {
+  display: flex;
+}
+#course-inner .tutor img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+#course-inner .tutor h5 {
+  font-size: 15px;
+  font-family: "BPG Nino Medium Caps", sans-serif;
+  color: #101c32;
+}
+#course-inner .enroll {
+  width: 300px;
+  padding: 0 30px 30px 30px;
+  border-radius: 11px;
+  box-shadow: 0 20px 40px 0 rgb(11 2 55 / 8%);
+}
+#course-inner .enroll h3 {
+  padding-bottom: 10px;
+  color: #101c32;
+}
+#course-inner .enroll p {
+  font-size: 16px;
+  font-family: "BPG Nino Mtavruli Book", sans-serif;
+  color: #64626e;
+  margin: 15px 0;
+}
+#course-inner .enroll p i {
+  color: #654ce4;
+  font-weight: 700;
+  margin-right: 18px;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+}
+#course-inner .enroll .enroll-btn {
+  padding: 25px 0 20px 0;
+  margin: auto;
+  text-align: center;
+}
+#course-inner .enroll .enroll-btn a {
+  text-decoration: none;
+  font-family: "BPG Nino Mtavruli Book", sans-serif;
+  font-size: 1.3rem;
+  padding: 13px 45px;
+  border-radius: 5px;
+  font-weight: 600;
+  color: #fff;
+  background: rgb(50, 50, 136);
+}
+/* contact */
+#contact {
+  padding: 8vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#contact .getin {
+  width: 500px;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+#contact .getin h2 {
+  color: #2c234d;
+  font-size: 30px;
+  font-family: "BPG Nino Mtavruli Bold", sans-serif;
+  font-weight: 800;
+  line-height: 0.8;
+  margin-bottom: 16px;
+}
+#contact .getin p {
+  color: #686875;
+  font-family: "BPG Nino Mtavruli Book", sans-serif;
+  font-weight: 800;
+  line-height: 24px;
+  margin-bottom: 33px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #e5e4ed;
+}
+#contact .getin h3 {
+  color: #2c234d;
+  font-size: 16px;
+  font-family: "BPG Nino Mtavruli Book", sans-serif;
+  font-weight: 600;
+  line-height: 26px;
+  margin-bottom: 15px;
+}
+#contact .getin .getin-details div {
+  display: flex;
+}
+#contact .getin .getin-details div .get {
+  font-size: 16px;
+  line-height: 22px;
+  color: #5838fc;
+  margin-right: 20px;
+}
+#contact .getin .getin-details div p {
+  font-size: 16px;
+  border-bottom: none;
+  line-height: 22px;
+  margin-bottom: 15px;
+}
+#contact .getin .pro-links i {
+  margin-right: 8px;
+}
+#contact .contact-image {
+  max-width: 50%;
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+  border-radius: 10px;
+}
+#products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4vw;
+}
+#products .products-block {
+  position: relative;
+  max-width: 70%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 150px;
+}
+#products .products-block::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 60px;
+  width: 60%;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  animation: line-move-before 5s linear infinite;
+}
+#products .products-block::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 80px;
+  width: 60%;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  animation: line-move-after 5s linear infinite;
+}
+@keyframes line-move-before {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 20%;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes line-move-after {
+  0% {
+    right: 0;
+  }
+  50% {
+    right: 20%;
+  }
+  100% {
+    right: 0;
+  }
+}
+#products .products-image {
+  width: 40%;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  transition: all 0.4s ease-in-out;
+}
+#products .products-image:hover {
+  transform: scale(1.07);
+  box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px, rgb(10 37 64 / 35%) 0px -2px 6px 0px inset;
+}
+#products .products-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#products .products-content {
+  width: 40%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#products .products-title {
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  letter-spacing: 1.8px;
+  color: #29303b;
+  font-family: "BPG Nino Medium Caps", sans-serif;
+}
+#products .products-text {
+  color: #757373;
+  font-family: "BPG Nino Mtavruli Book", sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  letter-spacing: 1.3px;
+}
+#products .products-link {
+  color: #29303b;
+  text-decoration: none;
+  line-height: 1.2rem;
+  letter-spacing: 1.3px;
+  transition: color 0.3s ease-in-out;
+}
+#products .products-link:hover {
+ color: #5838fc;
+}
+#vacancy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4vw;
+}
+#vacancy .vacancy-title {
+  max-width: 80%;
+  margin-bottom: 100px;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  letter-spacing: 1.8px;
+  color: #29303b;
+  font-family: "BPG Nino Medium Caps", sans-serif;
+  text-align: center;
+}
+#vacancy .vacancy-container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+#vacancy .vacancy-container:not(:last-child) {
+  margin-bottom: 100px;
+}
+#vacancy .vacancy-content {
+  width: 50%;
+}
+#vacancy .vacancy-content-image {
+  width: 600px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+#vacancy .vacancy-content-text {
+  font-size: 1.8rem;
+  line-height: 2rem;
+  letter-spacing: 1.8px;
+  color: #29303b;
+  font-family: "BPG Nino Medium Caps", sans-serif;
+  margin-bottom: 40px;
+}
+#vacancy .vacancy-form {
+  width: 500px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  padding: 40px 20px;
+  border-radius: 10px;
+}
+#vacancy .vacancy-form-name {
+  margin-bottom: 10px;
+  color: #757373;
+  letter-spacing: 1.6px;
+}
+#vacancy .vacancy-form-input {
+  margin-bottom: 25px;
+  border: none;
+  background-color: transparent;
+  box-shadow:  inset -6px -6px 15px rgba(70,70,70,0.12), inset 6px 6px 15px rgba(70,70,70,0.12);
+  padding: 10px;
+  width: 90%;
+  border-radius: 7px;
+  outline: none;
+}
+#vacancy .vacancy-form-file-box {
+  position: relative;
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
+  width: 80%;
+  margin-left: 8%;
+  margin-top: 30px;
+  border-radius: 30px;
+  padding: 10px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  transition: all 0.3s ease-in-out;
+}
+#vacancy .vacancy-form-file-box:hover {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  background-color: #fff;
+}
+#vacancy .vacancy-form-file-text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  cursor: pointer;
+  padding-top: 14px;
+  padding-left: 25%;
+  color: #000;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+#vacancy .vacancy-form-file-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+#vacancy .vacancy-form-file-box img {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 60px;
+  top: 14px;
+}
+#vacancy .vacancy-btn {
+  display: block;
+  margin-top: 50px;
+  width: 80%;
+  margin-left: 10%;
+  border-radius: 30px;
+  padding: 10px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #161616;
+  letter-spacing: 2px;
+  font-weight: 500;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+#vacancy .vacancy-btn:hover {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+#services {
+  padding: 4vw;
+}
+#services .services-title {
+  margin-left: 10vw;
+  position: relative;
+  padding-bottom: 30px;
+  overflow: hidden;
+}
+#services .services-title h2 {
+  font-size: 2.6rem;
+  letter-spacing: 1.8px;
+  line-height: 1.4;
+  font-weight: 700;
+  color: rgb(35, 35, 85);
+  font-family: "BPG Nino Mtavruli Bold", sans-serif;
+}
+#services .services-title span {
+  display: block;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 30px;
+  letter-spacing: 1.3px;
+  font-family: "BPG Nino Medium Caps", sans-serif;
+  color: rgb(70, 70, 87);
+}
+#services .services-title span:nth-child(2) {
+  margin-bottom: 10px;
+  margin-left: 2vw;
+  display: none;
+}
+#services .services-title span:nth-child(3) {
+  margin-bottom: 10px;
+  margin-left: 4vw;
+}
+#services .services-title span:nth-child(4) {
+  margin-left: 6vw;
+  display: none;
+}
+#services .services-container {
+  margin-top: 4vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#services .services-block {
+  width: 600px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#services .services-block-image {
+  width: 100%;
+  height: 400px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 2px 6px 2px;
+}
+#services .services-block-content {
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.884);
+  overflow: hidden;
+  padding: 20px;
+  border-radius: 5px;
+  transform: translateY(-90px);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+#services .services-block-title {
+  margin-bottom: 7px;
+  text-align: center;
+  font-size: 1.6rem;
+  letter-spacing: 1.8px;
+  line-height: 1.4;
+  font-weight: 700;
+  color: rgb(35, 35, 85);
+  font-family: "BPG Nino Mtavruli Bold", sans-serif;
+}
+#services .services-block-text {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 25px;
+  letter-spacing: 1.3px;
+  font-family: "BPG Nino Medium Caps", sans-serif;
+  color: rgb(70, 70, 87);
+}
+#services .services-block-info-box {
+  margin-top: 20px;
+}
+#services .services-block-info-title {
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 1.3px;
+  font-family: "BPG Nino Medium Caps", sans-serif;
+  color: rgb(70, 70, 87);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+#services .services-block-info-title:hover {
+  transform: translateX(4px);
+  color: #5838fc;
+}
+#services .services-block-info-list {
+  padding-left: 20px;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+}
+#services .services-block-content.services-list-active .services-block-info-list {
+  height: 100%;
+}
+#services .services-block-info-text {
+  color: rgb(70, 70, 87);
+  padding-top: 10px;
+}
+#services .services-block-info-text:last-child {
+  list-style: none;
+  margin-left: -20px;
+}
+#services .services-block-info-text-link {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease-in-out;
+}
+#services .services-block-info-text-link:hover {
+  color: #5838fc;
+}
+#sign {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0 100px;
+}
+#sign h2 {
+  font-family: 'Inter';
+  text-align: center;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: #14213D;
+  margin-bottom: 40px;
+}
+#sign form {
+  margin-bottom: 30px;
+}
+#sign form menu {
+  list-style: none;
+  margin-bottom: 30px;
+}
+#sign form menu li {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#sign form menu li:not(:last-child) {
+  margin-bottom: 22px;
+}
+#sign form menu li label {
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  color: #14213D;
+}
+#sign form menu li input {
+  width: 510px;
+  height: 60px;
+  border: 1px solid #14213D;
+  border-radius: 5px;
+  font-size: 32px;
+  padding: 0 10px;
+}
+#sign form article {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#sign form article button {
+  width: 162px;
+  height: 48px;
+  background: #14213D;
+  border-radius: 5px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  letter-spacing: 1.2px;
+  color: #FCA311;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+#sign form article button:hover {
+  color: #14213D;
+  background: #FCA311;
+}
+#sign div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+#sign div p {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #14213D;
+}
+#sign div a {
+  text-decoration: none;
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #14213D;
+  transition: all 0.3s ease-in-out;
+}
+#sign div a:hover {
+  color: #FCA311;
+  transform: translateX(5px);
+}
+#gallery {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding: 40px 40px 50px;
+}
+#gallery menu {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#gallery menu::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 2px;
+  background-color: #14213D;
+  z-index: 0;
+}
+#gallery menu li {
+  background-color: #fff;
+  z-index: 2;
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 19px;
+  letter-spacing: 1.2px;
+  color: #14213D;
+  cursor: pointer;
+  padding: 0 30px;
+  transition: all 0.3s ease-in-out;
+}
+#gallery menu li:hover {
+  color: #FCA311;
+}
+#gallery div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+#gallery div article {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  border: 1px solid #14213D;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  padding: 25px 15px;
+}
+#gallery div article div {
+  width: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#gallery div article div img {
+  width: 100%;
+  object-fit: cover;
+}
+#gallery div article ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#gallery div article ul li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+}
+#gallery div article ul li span {
+  width: 50%;
+  overflow: hidden;
+}
+#gallery div article ul li span:nth-child(1) {
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 19px;
+  color: #14213D;
+}
+#gallery div article ul li span:nth-child(2) {
+  font-family: 'Inter';
+  font-size: 18px;
+  line-height: 19px;
+  color: #14213D;
+}
+@media (max-width: 1600px) {
+  #products .products-block {
+    max-width: 100%;
+  }
+  #vacancy .vacancy-container {
+    width: 100%;
+  }
+  #vacancy .vacancy-content-image {
+    width: 600px;
+  }
+}
+@media (max-width: 1280px) {
+  #vacancy .vacancy-content-image {
+    width: 500px;
+  }
+}
+@media (max-width: 1200px) {
+  #vacancy .vacancy-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  #vacancy .vacancy-content-image {
+    margin-bottom: 30px;
+  }
+  #vacancy .vacancy-content {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 1150px) {
+  #menu-btn {
+    display: initial;
+  }
+  #menu-close {
+    display: initial;
+    font-size: 1.6rem;
+    color: #fff;
+    padding: 30px 0 20px 20px;
+    cursor: pointer;
+  }
+  nav .navigation ul {
+    position: absolute;
+    top: 0;
+    right: -220px;
+    width: 220px;
+    height: 100vh;
+    background: rgba(17, 20, 104, 0.45);
+    backdrop-filter: blur(4.5px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transition: 0.3s ease;
+  }
+  nav .navigation ul.active {
+    right: 0;
+  }
+  nav .navigation ul li {
+    padding: 20px 0 20px 40px;
+    margin-left: 0;
+  }
+  nav .navigation ul li a {
+    color: #fff;
+    font-family: "BPG Nino Mtavruli Bold", sans-serif;
+  }
+}
+@media (max-width: 1100px) {
+  #products .products-block {
+    flex-direction: column;
+    align-items: center;
+  }
+  #products .products-content {
+    width: 80%;
+  }
+  #products .products-image {
+    width: 80%;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 769px) {
+  nav {
+    padding: 15px 20px;
+  }
+  nav img {
+    width: 130px;
+  }
+  #home {
+    padding-top: 40px;
+  }
+  #home p {
+    width: 90%;
+  }
+  #features {
+    padding: 8vw 4vw 0 4vw;
+  }
+  #course {
+    padding: 8vw 4vw 0 4vw;
+  }
+  #registration {
+    margin-top: 8vw;
+    padding: 6vw 4vw 6vw 4vw;
+  }
+  #registration .reminder .time {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+  #experts {
+    padding: 8vw 8vw 4vw 8vw;
+    text-align: center;
+  }
+  footer .copyright .pro-links {
+    margin-top: 15px;
+  }
+  /* About */
+  #about-container {
+    padding: 8vw 4vw 2vw 4vw;
+  }
+  #about-container .about-img {
+    padding-right: 30px;
+  }
+  #trust .trust-img img {
+    width: 100px;
+    height: auto;
+  }
+  /* Blog */
+  #blog-container {
+    padding: 8vw 4vw;
+  }
+  #blog-container .blogspot {
+    width: 100%;
+    margin-top: 30px;
+  }
+  #blog-container .blogspot img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+  }
+  /* Course inner */
+  #course-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 8vw 4vw;
+  }
+  #course-inner .overview {
+    width: 100%;
+  }
+  #course-inner .overview .course-img {
+    width: 100%;
+  }
+  #course-inner .overview .course-head .c-name p {
+    width: 100%;
+    font-size: 1rem;
+  }
+  #course-inner .enroll {
+    margin-top: 25px;
+  }
+  /* Contact */
+  #contact {
+    padding: 8vw 4vw;
+  }
+  #contact .getin {
+    width: 250px;
+  }
+  #contact .contact-image {
+    width: 100%;
+  }
+  #trust .trust-img {
+    width: 100%;
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  #gallery div article {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px 30px 10px;
+    gap: 50px;
+  }
+}
+@media (max-width: 600px) {
+  #vacancy .vacancy-content-image {
+    max-width: 100%;
+  }
+  .header-btn {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .header-btn a {
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+  }
+}
+@media (max-width: 475px) {
+  #registration {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  #registration .reminder .time {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  /* About */
+  #about-container {
+    flex-direction: column-reverse;
+  }
+  #about-container .about-img {
+    width: 100%;
+    padding-right: 0;
+  }
+  #about-container .about-text {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  #trust .trust-img {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  #trust .trust-img img {
+    width: 100px;
+    margin: 10px 15px;
+    height: auto;
+  }
+  /* Blog */
+  #blog-container {
+    flex-direction: column;
+  }
+  #blog-container .blogs {
+    width: 100%;
+  }
+  #blog-container .cate {
+    width: 100%;
+  }
+  #blog-container .blogspot {
+    width: 100%;
+    margin-top: 70px;
+  }
+  #blog-container .blogspot img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+  }
+  #course-inner .overview .course-head .c-name {
+    width: 50%;
+  }
+  #course-inner .overview .course-head .c-name h2 {
+    font-size: 22px;
+  }
+  #course-inner .overview .course-head span {
+    font-size: 22px;
+  }
+  #course-inner .enroll {
+    width: 100%;
+  }
+  /* Contact */
+  #contact {
+    padding: 8vw 4vw;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: flex-start;
+  }
+  #contact .getin {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  #contact .contact-image {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1240px) {
+  #features .fea-base {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    margin-top: 50px;
+  }
+}
+@media (max-width: 376px) {
+  #home a.blue {
+    margin-right: 10px;
+  }
+  #home a.yellow {
+    margin-top: 20px;
+  }
+  #contact .contact-image {
+    width: 100%;
+  }
+  footer input {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  .countdown__title {
+    margin-top: 30px;
+    font-size: 34px;
+    letter-spacing: 5px;
+    font-weight: 700;
+    color: black;
+    padding: 20px;
+  }
+  .countdown__times {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 50px;
+  }
+  .countdown__time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    font-size: 36px;
+    font-weight: 800;
+    color: black;
+    letter-spacing: 10px;
+  }
+  .countdown__time-text {
+    font-size: 16px;
+  }
+  .countdown__time:not(:last-child) {
+    margin-right: 0px;
+  }
+  #contact .contact-image {
+    width: 100%;
+  }
+}
+@media (max-width: 770px) {
+  .time__title {
+    width: 100%;
+    text-align: center;
+    margin-right: 0px;
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 530px) {
+  #home h2 {
+    font-size: 2rem;
+  }
+  #features h1 {
+    font-size: 2rem;
+  }
+  #course h1 {
+    font-size: 2rem;
+  }
+  #experts h1 {
+    font-size: 2rem;
+  }
+  #registration .reminder h1 {
+    font-size: 2rem;
+  }
+  #contact .contact-image {
+    width: 100%;
+  }
+  .countdown__times {
+    align-items: center;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    margin-bottom: 30px;
+  }
+  #vacancy .vacancy-form {
+    width: 360px;
+  }
+  #vacancy .vacancy-form-file-text {
+    padding-top: 14px;
+    padding-left: 10%;
+  }
+  #vacancy .vacancy-form-file-box img {
+    right: 10px;
+  }
+  #sign h2 {
+    font-size: 30px;
+  }
+  #sign form menu li input {
+    width: 330px;
+  }
+  #sign form menu li label {
+    font-size: 22px;
+  }
+  #sign form article button {
+    width: 150px;
+    font-size: 22px;
+  }
+}
+@media (max-width: 460px) {
+  #gallery {
+    padding: 40px 10px 50px;
+  }
+  #gallery div article ul li span {
+    min-width: 52%;
+  }
+}
+@media (max-width: 400px) {
+  #gallery div article ul li span {
+    min-width: 52%;
+  }
+}
